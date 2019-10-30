@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<center><h2>Whois API</h2></center>
+
+<div class="content">
+    <center>
+        <form action="/Home/SearchDomain" method="post">
+            <input type="text" class="input-sm" style="min-width:600px;" placeholder="Insert here your domain..." name="domain">
+            <button class="btn-primary" type="submit">Search</button>
+        </form>
+        @if (Model != null)
+        {
+            var status = string.IsNullOrEmpty(@Model.status) ? "Available for registration" : "Registered";
+
+            if (status != "Available for registration")
+            {
+                <p><b>Date of creation:</b>@Model.created</p>
+                <p><b>Date of update:</b>@Model.changed</p>
+                <p><b>Date of expires:</b>@Model.expires</p>
+
+                foreach (string dns in @Model.nameservers)
+                {
+                    @dns<br />
+                }
+            
+
+            }
+
+        }
+    </center>
+</div>
+

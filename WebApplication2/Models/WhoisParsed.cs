@@ -8,6 +8,7 @@ namespace WebApplication2.Models
 {
     public class WhoisParsed
     {
+     
         [Key] public int trackId { get; set; }
         public string name { get; set; }
         public object created { get; set; }
@@ -21,4 +22,6 @@ namespace WebApplication2.Models
         public object throttled { get; set; }
 
     }
+
+    
 }

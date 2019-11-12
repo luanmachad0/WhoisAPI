@@ -10,7 +10,7 @@ namespace WebApplication2.Models
     public class WhoisContext : DbContext
     {
         public WhoisContext()
-            : base ("WhoisContext")
+            : base("WhoisContext")
         {
         }
 

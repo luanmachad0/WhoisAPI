@@ -19,14 +19,16 @@
             {
                 <p><b>Date of creation:</b>@Model.created</p>
                 <p><b>Date of update:</b>@Model.changed</p>
-                <p><b>Date of expires:</b>@Model.expires</p>
+                <p><b>Date of expires:</b>@Model.expires</p>               
+                
 
                 foreach (string dns in @Model.nameservers)
                 {
                     @dns<br />
                 }
 
-            } else
+            }
+            else
             {
                 <p><b>Domain available for registration!</b></p>
             }

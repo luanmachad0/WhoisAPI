@@ -25,6 +25,7 @@ namespace WebApplication2.Models
             var response = httpClient.Execute(request);
 
             var WhoisParsed = JsonConvert.DeserializeObject<WhoisParsed>(response.Content);
+            
 
             return WhoisParsed;
         }
